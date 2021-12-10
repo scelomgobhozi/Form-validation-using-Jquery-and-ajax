@@ -11,12 +11,14 @@
 <script>
     $(document).ready(function(){
      $("form").submit(function(event){
-         event.preventDefault();
+         event.preventDefault()
+         
          var name = $("#mail-name").val();
-         var email = $("#email-email").val();
+         var email = $("#mail-email").val();
          var gender = $("#mail-gender").val();
          var message = $("#mail-message").val();
          var submit = $("#mail-submit").val();
+         console.log(name+" "+email+" "+gender+" "+message+" "+submit);
 
          $(".form-message").load("mail.php",{
              name:name,
@@ -37,20 +39,20 @@
   
 <form action="mail.php" method="post">
 
-<input " id="mail-name" type="text" placeholder="Full name">
+<input  id="mail-name" type="text" placeholder="Full name">
 <br>
 <input id="mail-email" type="email" name="" id="" placeholder="E-mail">
 <br>
 
-<select name="gender" id="male-gender">
+<select name="gender" id="mail-gender">
  <option value="male">Male</option>
  <option value="female">Female</option>
 </select>
 <br>
 <textarea name="message" id="mail-message" placeholder="message"  cols="30" rows="10"></textarea>
 <br>
-<button id="name-submit" type="submit" name="submit" >Send e-mail</button>
-<p id="form-message"></p>
+<button id="mail-submit" type="submit" name="submit" >Send e-mail</button>
+<p id="" class="form-message"></p>
 
 </form>
 
