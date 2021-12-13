@@ -20,7 +20,7 @@
          var submit = $("#mail-submit").val();
          console.log(name+" "+email+" "+gender+" "+message+" "+submit);
 
-         $(".form-message").load("mail.php",{
+         $(".form-message").load("email.php",{
              name:name,
              email:email,
              gender:gender,
@@ -37,7 +37,7 @@
 </head>
 <body>
   
-<form action="mail.php" method="post">
+<form action="email.php" method="post">
 
 <input  id="mail-name" type="text" placeholder="Full name">
 <br>
